@@ -1,0 +1,25 @@
+Exercise 01
+
+1.Open Google colab. Upload the 1D_Convolution.ipynb to colab. Run all cells. Based on the result, 
+explain how 1D convolution can be used to identify the edges in an image.
+
+*1D convolution can be used in image processing,to locate edges in a picture by applying filters/kernels that are designed to respond strongly to intensity changes.
+ A filter with coefficients like [-1, 0, 1] highlights places where there is a transition from dark to light or light to dark, which corresponds to an edge in the image when paired with a 1D signal (row of pixel values). 
+ The positive and negative coefficients of the filter effectively calculate the gradient of the signal and highlight edges where there are sharp variations in intensity.
+
+
+Exercise 03
+
+3.  a) Why does the validation error increase when the number of epochs is increased? 
+       Explain how you can modify the training process to stop that from happening.
+ 
+    *   Increasing the length of training periods can result in over fitting. Over fitting occurs when a model learns to fit the training data too closely, including noise, and then fails to generalise successfully to new, previously unknown data. 
+        As the model becomes less resilient, the validation error may increase.
+        Methods such as early halting or regularisation can assist you in avoiding this.Early stopping entails monitoring the validation error during training and halting when it begins to rise.
+        Regularisation methods, such as L1 or L2, add penalties to the loss function dependent on the size of the model's parameters.These sanctions assist the model in learning more generic traits while also preventing it from creating noise.
+
+    b) Explain how the mini batch SGD (Stochastic Gradient Descent) algorithm can converge faster than the batch 
+       Gradient Descent algorithm.
+
+    *  The stability of Batch Gradient Descent is balanced by the efficiency of pure Stochastic Gradient Descent in mini-batch SGD. Mini-batch SGD can converge quicker than the classic Batch Gradient Descent technique because it reduces noise in gradient updates, 
+       takes advantage of parallelism, and allows for variable learning rates. The batch size selected is a hyperparameter that can influence the trade-off between accuracy and convergence speed.
